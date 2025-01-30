@@ -5,11 +5,8 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/')
-def home():
-    return 'Welcome to my Flask App'
 
-@app.route('/get_details', methods = ['GET'])
+@app.route('/', methods = ['GET'])
 def get_details():
     return jsonify({
         'email': 'rhodalee.dev@gmail.com',
